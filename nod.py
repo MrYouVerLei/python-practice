@@ -8,16 +8,16 @@ except ValueError:
     exit()
 
 if a <= 0 or b <= 0:
-    print('Вы ввели не натуральные числа!')
+    print('Вы ввели не натуральные числа! Попробуйте ещё раз.')
     exit()
 
-def nod(a1, b1):
-    while a1 != 0 and b1 != 0:
-        if a1 > b1:
-            a1 = a1 % b1
+def nod(x, y):
+    while x != 0 and y != 0:
+        if x > y:
+            x = x % y
         else:
-            b1 = b1 % a1
-    return a1 + b1
+            y = y % x
+    return x + y
 
-print('НОД =', nod(a, b))
-print('НОД =', math.gcd(a, b))
+print('НОД функции =', nod(a, b))
+print('НОД с помощью модуля "math" =', math.gcd(a, b))
